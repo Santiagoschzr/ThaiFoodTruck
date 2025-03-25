@@ -121,6 +121,7 @@ main {
   text-align: center;
   width: auto;
   min-width: 100px;
+  pointer-events: none;
 }
 
 .scroll-container {
@@ -132,6 +133,18 @@ main {
   transition: transform 0.3s ease;
 }
 
+.scroll-container-invisible {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: auto;
+  transition: transform 0.3s ease;
+}
+
+.scroll-container-invisible:hover {
+  transform: translateY(-3px);
+}
+
 .scroll-container:hover {
   transform: translateY(-5px);
 }
@@ -139,6 +152,11 @@ main {
 .scroll-content {
   padding: 12px 20px;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-content:hover {
+  opacity: 0.8;
 }
 
 .scroll-content span.text-2xl {
@@ -368,7 +386,7 @@ main {
   }
 
   .scroll-content {
-    padding: 10px 16px;
+    padding: 10px 0;
   }
 }
 
@@ -471,7 +489,7 @@ main {
   }
 
   .hero-scroll {
-    bottom: 1.5rem;
+    bottom: 2rem;
   }
 
   .scroll-container {
@@ -479,7 +497,7 @@ main {
   }
 
   .scroll-content {
-    padding: 8px 14px;
+    padding: 8px 0;
   }
 
   .scroll-content span.text-sm {

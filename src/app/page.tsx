@@ -89,7 +89,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
-            className="scroll-container"
+            className="scroll-container-invisible"
           >
             <div
               className="scroll-content"
@@ -99,8 +99,9 @@ export default function Home() {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              <span className="block text-sm mb-2">Scroll Down</span>
-              <span className="text-2xl">↓</span>
+              <span className="block text-sm mb-2">
+                Scroll Down <span className="text-2xl">↓</span>
+              </span>
             </div>
           </motion.div>
         </div>
