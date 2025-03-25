@@ -79,11 +79,14 @@ export default function Home() {
               de México. Sabores exóticos y frescos que te transportarán a las
               calles de Bangkok.
             </p>
-            <a href="#menu" className="hero-button">
-              Ver Menú
-            </a>
+            <div className="hero-button-container">
+              <a href="#menu" className="hero-button">
+                Ver Menú
+              </a>
+            </div>
           </motion.div>
         </div>
+
         <div className="hero-scroll">
           <motion.div
             initial={{ opacity: 0 }}

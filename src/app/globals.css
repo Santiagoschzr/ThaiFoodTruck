@@ -117,7 +117,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   color: var(--dark);
-  z-index: 2;
+  z-index: 1;
   text-align: center;
   width: auto;
   min-width: 100px;
@@ -388,6 +388,22 @@ main {
   .scroll-content {
     padding: 10px 0;
   }
+
+  .hero-scroll {
+    bottom: 0.5rem;
+    z-index: 1;
+  }
+
+  .hero-button-container {
+    margin-bottom: 3.5rem;
+    z-index: 15;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 5;
+    padding-bottom: 0;
+  }
 }
 
 /* Extra small devices */
@@ -489,7 +505,15 @@ main {
   }
 
   .hero-scroll {
-    bottom: 2rem;
+    bottom: 0.25rem;
+  }
+
+  .hero-button-container {
+    margin-bottom: 4rem;
+  }
+
+  .hero-content {
+    padding-bottom: 0;
   }
 
   .scroll-container {
@@ -1104,4 +1128,16 @@ main {
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 75, 75, 0.3);
   animation: fadeInUp 1s ease-out 0.5s backwards;
+}
+
+.hero-button-container {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-button:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
 }
