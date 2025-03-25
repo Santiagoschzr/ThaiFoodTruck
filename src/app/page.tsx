@@ -169,7 +169,7 @@ export default function Home() {
             {/* Experience Counter */}
             <motion.div
               initial={{ scale: 0.8 }}
-              whileInView={{ scale: 1 }}
+              whileInView={{ scale: 1.2 }}
               transition={{ duration: 0.5 }}
               className="experience-counter"
             >
