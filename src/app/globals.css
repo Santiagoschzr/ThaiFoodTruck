@@ -945,10 +945,10 @@ main {
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-bottom: 2rem;
   width: 100%;
+  max-width: 100vw;
 }
 
 .achievement-card {
