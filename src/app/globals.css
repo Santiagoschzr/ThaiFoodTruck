@@ -185,53 +185,59 @@ body {
 .modern-map-container {
   width: 100%;
   height: 400px;
-  border-radius: 8px;
+  border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 .modern-map-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  background: white;
+  border-radius: 1rem;
   padding: 2rem;
-  background: var(--light);
-  border-radius: 8px;
-  margin-top: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .modern-map-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.75rem;
+  font-weight: 700;
   color: var(--dark);
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .modern-map-text {
+  font-size: 1rem;
   color: var(--secondary);
   line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .modern-map-schedule {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  margin-top: 1rem;
+  width: 100%;
 }
 
 .modern-map-schedule-item {
-  padding: 1rem;
   background: var(--gray);
-  border-radius: 4px;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
 }
 
 .modern-map-schedule-day {
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--dark);
+  margin-bottom: 0.5rem;
 }
 
 .modern-map-schedule-hours {
-  color: var(--secondary);
   font-size: 0.9rem;
+  color: var(--secondary);
 }
 
 .modern-story {
@@ -310,6 +316,7 @@ body {
   background: linear-gradient(135deg, var(--light) 0%, #f8f9fa 100%);
   width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .achievements-container {
@@ -317,11 +324,12 @@ body {
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+  padding: 0 1rem;
 }
 
 .achievements-title {
   font-family: "Space Mono", monospace;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
@@ -331,71 +339,25 @@ body {
 }
 
 .achievements-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--secondary);
   text-align: center;
-  margin-bottom: 1.5rem;
-  padding: 0 0.5rem;
-  line-height: 1.4;
-}
-
-.achievements-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-}
-
-.achievement-card {
-  background: white;
-  border-radius: 0.75rem;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.achievement-icon {
-  font-size: 1.5rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.achievement-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--dark);
-  margin-bottom: 0.25rem;
-  width: 100%;
-  word-wrap: break-word;
-}
-
-.achievement-description {
-  font-size: 0.8rem;
-  color: var(--secondary);
-  line-height: 1.3;
-  width: 100%;
-  word-wrap: break-word;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  line-height: 1.6;
 }
 
 .experience-counter {
-  width: 5rem;
-  height: 5rem;
-  margin: 0 auto 1.5rem;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 2rem;
   position: relative;
 }
 
 .experience-circle {
   position: absolute;
   inset: 0;
-  background-color: #ff4b4b;
+  background-color: var(--primary);
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
@@ -411,55 +373,102 @@ body {
 }
 
 .experience-number {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #ff4b4b;
+  color: var(--primary);
   margin-bottom: 0.25rem;
   text-align: center;
 }
 
 .experience-label {
-  font-size: 0.7rem;
-  color: #2c3e50;
+  font-size: 0.8rem;
+  color: var(--secondary);
   text-align: center;
 }
 
-.stats-grid {
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.achievement-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.achievement-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.achievement-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.achievement-description {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  line-height: 1.4;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
   width: 100%;
 }
 
 .stat-card {
-  flex: 1 1 calc(50% - 0.375rem);
-  padding: 0.75rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  background-color: white;
-  min-width: 0;
+  justify-content: center;
+  min-height: 140px;
+  width: 100%;
   box-sizing: border-box;
 }
 
 .stat-icon {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .stat-number {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #ff4b4b;
-  margin-bottom: 0.25rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  font-size: 0.75rem;
-  color: #2c3e50;
+  font-size: 0.9rem;
+  color: var(--secondary);
   font-weight: 500;
   width: 100%;
   word-wrap: break-word;
@@ -479,34 +488,6 @@ body {
     font-size: 1.25rem;
     margin-bottom: 3rem;
     padding: 0;
-  }
-
-  .achievements-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .achievement-card {
-    flex: 1 1 calc(50% - 1rem);
-    padding: 2rem;
-    min-height: 200px;
-  }
-
-  .achievement-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .achievement-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .achievement-description {
-    font-size: 1rem;
-    line-height: 1.6;
   }
 
   .experience-counter {
@@ -695,120 +676,147 @@ body {
 
 /* Ajustes específicos para móviles */
 @media screen and (max-width: 768px) {
-  .achievements-section {
-    padding: 1.5rem 0.5rem;
-    width: 100vw;
+  .modern-section {
+    padding: 2rem 1rem;
     overflow-x: hidden;
   }
 
-  .achievements-container {
-    width: 100%;
+  .modern-container {
     padding: 0 0.5rem;
   }
 
+  .modern-map-schedule {
+    grid-template-columns: 1fr;
+  }
+
+  .modern-title {
+    font-size: 2rem;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
   .achievements-title {
-    font-size: 1.5rem;
-    padding: 0 0.5rem;
+    font-size: 2rem;
     margin-bottom: 0.75rem;
   }
 
   .achievements-description {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
     padding: 0 0.5rem;
-    margin-bottom: 1rem;
+  }
+
+  .experience-counter {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-number {
+    font-size: 1.75rem;
+  }
+
+  .experience-label {
+    font-size: 0.7rem;
   }
 
   .achievements-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 0 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .achievement-card {
-    width: 100%;
-    padding: 0.75rem;
-    min-height: auto;
-    margin: 0;
+    padding: 1.25rem;
+    min-height: 140px;
   }
 
   .achievement-icon {
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
   }
 
   .achievement-title {
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-bottom: 0.25rem;
   }
 
   .achievement-description {
-    font-size: 0.75rem;
-    line-height: 1.2;
-  }
-
-  .experience-counter {
-    width: 4rem;
-    height: 4rem;
-    margin: 0 auto 1rem;
-  }
-
-  .experience-number {
-    font-size: 1.5rem;
-  }
-
-  .experience-label {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
   }
 
   .stats-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
 
   .stat-card {
-    flex: 0 0 calc(50% - 0.25rem);
-    padding: 0.5rem;
-    min-width: 0;
+    padding: 1rem;
+    min-height: 120px;
   }
 
   .stat-icon {
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .stat-number {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 0.25rem;
   }
 
   .stat-label {
-    font-size: 0.7rem;
-    line-height: 1.2;
+    font-size: 0.8rem;
+  }
+
+  .modern-map-container {
+    height: 300px;
+    margin-bottom: 1.5rem;
+  }
+
+  .modern-map-info {
+    padding: 1.5rem;
+  }
+
+  .modern-map-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .modern-map-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .modern-map-schedule {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .modern-map-schedule-item {
+    padding: 1rem;
+  }
+
+  .modern-map-schedule-day {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .modern-map-schedule-hours {
+    font-size: 0.85rem;
   }
 }
 
-/* Ajustes específicos para dispositivos muy pequeños */
 @media screen and (max-width: 360px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
   .achievements-title {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
 
   .achievements-description {
-    font-size: 0.8rem;
-  }
-
-  .achievement-title {
-    font-size: 0.8rem;
-  }
-
-  .achievement-description {
-    font-size: 0.7rem;
-  }
-
-  .stat-card {
-    flex: 0 0 100%;
+    font-size: 0.85rem;
+    padding: 0 0.25rem;
   }
 }
