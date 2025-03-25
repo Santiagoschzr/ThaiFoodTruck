@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo base -->
+  <rect width="1920" height="1080" fill="#1A1A1A"/>
+  
+  <!-- Patrón de líneas diagonales -->
+  <pattern id="diagonalLines" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="40" x2="40" y2="0" stroke="#FF4B4B" stroke-width="1" opacity="0.1"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#diagonalLines)"/>
+  
+  <!-- Círculos decorativos -->
+  <circle cx="960" cy="540" r="400" stroke="#FF4B4B" stroke-width="2" opacity="0.1"/>
+  <circle cx="960" cy="540" r="300" stroke="#FF4B4B" stroke-width="2" opacity="0.1"/>
+  <circle cx="960" cy="540" r="200" stroke="#FF4B4B" stroke-width="2" opacity="0.1"/>
+  
+  <!-- Líneas decorativas -->
+  <line x1="0" y1="540" x2="1920" y2="540" stroke="#FF4B4B" stroke-width="1" opacity="0.1"/>
+  <line x1="960" y1="0" x2="960" y2="1080" stroke="#FF4B4B" stroke-width="1" opacity="0.1"/>
+</svg> 
