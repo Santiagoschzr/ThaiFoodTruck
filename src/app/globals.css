@@ -295,10 +295,11 @@ body {
 
 /* Achievements Section */
 .achievements-section {
-  padding: 6rem 2rem;
+  padding: 4rem 1rem;
   background: linear-gradient(135deg, var(--light) 0%, #f8f9fa 100%);
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .achievements-container {
@@ -306,54 +307,44 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .achievements-title {
   font-family: "Space Mono", monospace;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   color: var(--dark);
   position: relative;
+  width: 100%;
+  word-wrap: break-word;
 }
 
-.achievements-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: var(--primary);
-  margin: 1rem auto;
-  border-radius: 2px;
+.achievements-description {
+  font-size: 1rem;
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  line-height: 1.5;
 }
 
 .achievements-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-bottom: 4rem;
-  padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-  .achievements-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .achievements-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 0;
 }
 
 .achievement-card {
   background: white;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1.25rem;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -361,53 +352,38 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 160px;
+  min-height: 140px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .achievement-icon {
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: var(--primary);
-  margin-bottom: 0.75rem;
-}
-
-.achievement-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--dark);
   margin-bottom: 0.5rem;
 }
 
+.achievement-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+  width: 100%;
+  word-wrap: break-word;
+}
+
 .achievement-description {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--secondary);
-  line-height: 1.5;
+  line-height: 1.4;
+  width: 100%;
+  word-wrap: break-word;
 }
 
-@media (min-width: 768px) {
-  .achievement-card {
-    padding: 2rem;
-    min-height: 200px;
-  }
-
-  .achievement-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .achievement-title {
-    font-size: 1.2rem;
-  }
-
-  .achievement-description {
-    font-size: 1rem;
-  }
-}
-
-/* Experience Counter */
 .experience-counter {
-  width: 12rem;
-  height: 12rem;
-  margin: 0 auto 6rem;
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto 3rem;
   position: relative;
 }
 
@@ -430,15 +406,15 @@ body {
 }
 
 .experience-number {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #ff4b4b;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   text-align: center;
 }
 
 .experience-label {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #2c3e50;
   text-align: center;
 }
@@ -447,20 +423,13 @@ body {
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    padding: 0;
-  }
+  gap: 1rem;
+  width: 100%;
+  padding: 0;
 }
 
 .stat-card {
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -469,27 +438,96 @@ body {
   align-items: center;
   text-align: center;
   background-color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .stat-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff4b4b;
+  font-size: 1.75rem;
   margin-bottom: 0.5rem;
 }
 
+.stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ff4b4b;
+  margin-bottom: 0.25rem;
+}
+
 .stat-label {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #2c3e50;
   font-weight: 500;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 @media (min-width: 768px) {
+  .achievements-section {
+    padding: 6rem 2rem;
+  }
+
+  .achievements-container {
+    padding: 0;
+  }
+
+  .achievements-title {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .achievements-description {
+    font-size: 1.25rem;
+    margin-bottom: 4rem;
+    padding: 0;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .achievement-card {
+    padding: 2rem;
+    min-height: 200px;
+  }
+
+  .achievement-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .achievement-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .achievement-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .experience-counter {
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto 6rem;
+  }
+
+  .experience-number {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .experience-label {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+
   .stat-card {
     padding: 2rem;
   }
@@ -505,6 +543,12 @@ body {
 
   .stat-label {
     font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .achievements-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
