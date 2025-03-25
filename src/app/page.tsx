@@ -230,26 +230,54 @@ export default function Home() {
             </div>
 
             {/* Additional Stats */}
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="text-xl font-bold mb-6 text-center"
+            >
+              Nuestras Estadísticas
+            </motion.h3>
             <div className="stats-grid-container">
               <div className="stats-grid">
                 {[
                   {
                     number: "10,000+",
-                    label: "Clientes",
+                    label: "Clientes Satisfechos",
                     icon: "👥",
+                    color: "text-blue-500",
+                    bgColor: "bg-blue-50",
                   },
-                  { number: "50+", label: "Eventos", icon: "🎉" },
-                  { number: "15+", label: "Platillos", icon: "🍜" },
-                  { number: "98%", label: "Calidad", icon: "⭐" },
+                  {
+                    number: "50+",
+                    label: "Eventos Especiales",
+                    icon: "🎉",
+                    color: "text-purple-500",
+                    bgColor: "bg-purple-50",
+                  },
+                  {
+                    number: "15+",
+                    label: "Platillos Auténticos",
+                    icon: "🍜",
+                    color: "text-orange-500",
+                    bgColor: "bg-orange-50",
+                  },
+                  {
+                    number: "98%",
+                    label: "Índice de Calidad",
+                    icon: "⭐",
+                    color: "text-amber-500",
+                    bgColor: "bg-amber-50",
+                  },
                 ].map((stat, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="stat-card"
+                    className={`stat-card ${stat.bgColor} border border-gray-100`}
                   >
-                    <div className="stat-icon">{stat.icon}</div>
+                    <div className={`stat-icon ${stat.color}`}>{stat.icon}</div>
                     <div className="stat-number">{stat.number}</div>
                     <div className="stat-label">{stat.label}</div>
                   </motion.div>
