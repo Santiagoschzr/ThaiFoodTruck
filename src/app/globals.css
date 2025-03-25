@@ -25,6 +25,19 @@ body {
   font-family: "IBM Plex Mono", monospace;
   overflow-x: hidden;
   max-width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+main {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .stats-grid-container {
@@ -41,6 +54,7 @@ body {
   margin: 0;
   background: var(--light);
   width: 100%;
+  max-width: 100vw;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -55,6 +69,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   padding: 0 1rem;
+  overflow: hidden;
 }
 
 .modern-title {
@@ -153,12 +168,15 @@ body {
   .modern-section {
     padding: 2rem 0.75rem;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   .modern-container,
   .achievements-container {
     padding: 0 0.75rem;
     width: 100%;
+    max-width: 100%;
     overflow: hidden;
   }
 
@@ -288,9 +306,18 @@ body {
     padding: 0 0.5rem;
   }
 
+  .stats-grid-container {
+    padding: 0 0.5rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
+    width: 100%;
+    overflow: hidden;
   }
 
   .stat-card {
@@ -310,6 +337,9 @@ body {
 
   .stat-label {
     font-size: 0.8rem;
+    line-height: 1.2;
+    max-width: 100%;
+    padding: 0 0.15rem;
   }
 }
 
@@ -380,6 +410,8 @@ body {
 
   .stat-label {
     font-size: 0.75rem;
+    line-height: 1.1;
+    padding: 0 0.1rem;
   }
 
   .achievement-card {
@@ -733,6 +765,8 @@ body {
   padding: 3rem 0;
   background: linear-gradient(135deg, var(--light) 0%, #f8f9fa 100%);
   overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .achievements-container {
@@ -919,6 +953,7 @@ body {
   word-break: break-word;
   padding: 0;
   margin: 0;
+  hyphens: auto;
 }
 
 @keyframes pulse {

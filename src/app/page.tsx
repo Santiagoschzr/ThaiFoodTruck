@@ -64,9 +64,9 @@ const truckImages = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section w-full overflow-hidden">
         <div className="hero-content">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Story Section */}
-      <section className="modern-section">
+      <section className="modern-section w-full max-w-full overflow-hidden">
         <div className="modern-container">
           <motion.div
             initial={{ opacity: 0 }}
@@ -152,13 +152,13 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section className="achievements-section">
-        <div className="achievements-container">
+      <section className="achievements-section w-full max-w-full overflow-hidden">
+        <div className="achievements-container overflow-hidden">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center w-full max-w-full"
           >
             <h2 className="achievements-title">Logros y Reconocimientos</h2>
             <p className="achievements-description">
@@ -182,7 +182,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <div className="achievements-grid">
+            <div className="achievements-grid w-full max-w-full overflow-hidden px-0">
               {[
                 {
                   title: "Mejor Food Truck 2023",
@@ -238,8 +238,8 @@ export default function Home() {
             >
               Nuestras Estadísticas
             </motion.h3>
-            <div className="stats-grid-container">
-              <div className="stats-grid">
+            <div className="stats-grid-container w-full max-w-full overflow-hidden">
+              <div className="stats-grid w-full max-w-full">
                 {[
                   {
                     number: "10,000+",
@@ -279,7 +279,9 @@ export default function Home() {
                   >
                     <div className={`stat-icon ${stat.color}`}>{stat.icon}</div>
                     <div className="stat-number">{stat.number}</div>
-                    <div className="stat-label">{stat.label}</div>
+                    <div className="stat-label text-xs sm:text-sm md:text-base w-full max-w-full">
+                      {stat.label}
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -289,7 +291,7 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <section className="modern-section">
+      <section className="modern-section w-full max-w-full overflow-hidden">
         <div className="modern-container">
           <motion.div
             initial={{ opacity: 0 }}
@@ -328,7 +330,10 @@ export default function Home() {
       </section>
 
       {/* Menu Section */}
-      <section id="menu" className="modern-section">
+      <section
+        id="menu"
+        className="modern-section w-full max-w-full overflow-hidden"
+      >
         <div className="modern-container">
           <h2 className="modern-title text-center text-3xl mb-12">Menú</h2>
           <div className="modern-menu-grid">
@@ -370,7 +375,7 @@ export default function Home() {
       </section>
 
       {/* Location Section */}
-      <section className="modern-section">
+      <section className="modern-section w-full max-w-full overflow-hidden">
         <div className="modern-container">
           <motion.div
             initial={{ opacity: 0 }}
@@ -410,7 +415,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="modern-section">
+      <section className="modern-section w-full max-w-full overflow-hidden">
         <div className="modern-container">
           <motion.div
             initial={{ opacity: 0 }}
@@ -445,7 +450,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="modern-section bg-[#1A1A1A] text-white">
+      <footer className="modern-section bg-[#1A1A1A] text-white w-full max-w-full overflow-hidden">
         <div className="modern-container text-center">
           <p className="mb-4">Síguenos en redes sociales</p>
           <div className="flex justify-center gap-6">
