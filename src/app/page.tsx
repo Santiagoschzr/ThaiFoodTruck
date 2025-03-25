@@ -166,9 +166,9 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section className="achievements-section w-full max-w-full ">
+      <section className="achievements-section ">
         <div className="achievements-container ">
-          <motion.div className="text-center w-full max-w-full">
+          <motion.div className="text-center ">
             <h2 className="achievements-title">Logros y Reconocimientos</h2>
             <p className="achievements-description">
               4 años de excelencia en la cocina tailandesa, llevando los
