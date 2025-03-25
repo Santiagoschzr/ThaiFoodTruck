@@ -89,9 +89,19 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
+            className="scroll-container"
           >
-            <span className="block text-sm mb-2">Scroll Down</span>
-            <span className="text-2xl">↓</span>
+            <div
+              className="scroll-content"
+              onClick={() =>
+                document
+                  .querySelector(".modern-section")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              <span className="block text-sm mb-2">Scroll Down</span>
+              <span className="text-2xl">↓</span>
+            </div>
           </motion.div>
         </div>
       </section>

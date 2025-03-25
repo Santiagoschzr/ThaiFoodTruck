@@ -117,12 +117,33 @@ main {
   left: 50%;
   transform: translateX(-50%);
   color: var(--dark);
-  font-size: 1.5rem;
-  animation: bounce 2s infinite;
   z-index: 2;
   text-align: center;
   width: auto;
   min-width: 100px;
+}
+
+.scroll-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.scroll-container:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-content {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.scroll-content span.text-2xl {
+  display: inline-block;
+  animation: bounce 2s infinite;
 }
 
 @keyframes fadeInDown {
@@ -341,6 +362,14 @@ main {
     max-width: 100%;
     padding: 0 0.15rem;
   }
+
+  .scroll-container {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .scroll-content {
+    padding: 10px 16px;
+  }
 }
 
 /* Extra small devices */
@@ -439,6 +468,26 @@ main {
   .achievement-description {
     font-size: 0.85rem;
     line-height: 1.4;
+  }
+
+  .hero-scroll {
+    bottom: 1.5rem;
+  }
+
+  .scroll-container {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .scroll-content {
+    padding: 8px 14px;
+  }
+
+  .scroll-content span.text-sm {
+    font-size: 0.75rem;
+  }
+
+  .scroll-content span.text-2xl {
+    font-size: 1.25rem;
   }
 }
 
