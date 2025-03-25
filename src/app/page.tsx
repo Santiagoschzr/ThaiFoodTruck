@@ -152,14 +152,9 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section className="achievements-section w-full max-w-full overflow-hidden">
-        <div className="achievements-container overflow-hidden">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center w-full max-w-full"
-          >
+      <section className="achievements-section w-full max-w-full ">
+        <div className="achievements-container ">
+          <motion.div className="text-center w-full max-w-full">
             <h2 className="achievements-title">Logros y Reconocimientos</h2>
             <p className="achievements-description">
               4 años de excelencia en la cocina tailandesa, llevando los
@@ -169,7 +164,7 @@ export default function Home() {
             {/* Experience Counter */}
             <motion.div
               initial={{ scale: 0.8 }}
-              whileInView={{ scale: 1.2 }}
+              whileInView={{ scale: 1 }}
               transition={{ duration: 0.5 }}
               className="experience-counter"
             >
@@ -182,7 +177,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <div className="achievements-grid w-full max-w-full overflow-hidden px-0">
+            <div className="achievements-grid">
               {[
                 {
                   title: "Mejor Food Truck 2023",
@@ -238,8 +233,8 @@ export default function Home() {
             >
               Nuestras Estadísticas
             </motion.h3>
-            <div className="stats-grid-container w-full max-w-full overflow-hidden">
-              <div className="stats-grid w-full max-w-full">
+            <div className="stats-grid-container">
+              <div className="stats-grid">
                 {[
                   {
                     number: "10,000+",
@@ -274,7 +269,6 @@ export default function Home() {
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`stat-card ${stat.bgColor} border border-gray-100`}
                   >
                     <div className={`stat-icon ${stat.color}`}>{stat.icon}</div>
