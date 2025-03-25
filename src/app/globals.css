@@ -25,6 +25,20 @@ body {
   font-family: "IBM Plex Mono", monospace;
 }
 
+.stats-grid-container {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
 .modern-section {
   padding: 4rem 1rem;
   margin: 0;
