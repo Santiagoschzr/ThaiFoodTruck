@@ -223,11 +223,11 @@ main {
   }
 
   .experience-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .experience-label {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
   }
 
   .modern-map-container {
@@ -384,6 +384,15 @@ main {
     height: 4.5rem;
   }
 
+  .experience-number {
+    font-size: 1.5rem;
+  }
+
+  .experience-label {
+    font-size: 0.55rem;
+    max-width: 95%;
+  }
+
   .modern-map-container {
     height: 200px;
   }
@@ -481,7 +490,8 @@ main {
   }
 
   .experience-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    max-width: 85%;
   }
 
   .achievements-grid {
@@ -820,20 +830,26 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
 }
 
 .experience-number {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
   text-align: center;
+  line-height: 1;
 }
 
 .experience-label {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: var(--secondary);
   text-align: center;
+  line-height: 1;
+  word-wrap: break-word;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .achievements-grid {
