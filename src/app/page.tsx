@@ -230,29 +230,31 @@ export default function Home() {
             </div>
 
             {/* Additional Stats */}
-            <div className="stats-grid">
-              {[
-                {
-                  number: "10,000+",
-                  label: "Clientes Satisfechos",
-                  icon: "👥",
-                },
-                { number: "50+", label: "Eventos Especiales", icon: "🎉" },
-                { number: "15+", label: "Platillos Únicos", icon: "🍜" },
-                { number: "98%", label: "Satisfacción", icon: "⭐" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="stat-card"
-                >
-                  <div className="stat-icon">{stat.icon}</div>
-                  <div className="stat-number">{stat.number}</div>
-                  <div className="stat-label">{stat.label}</div>
-                </motion.div>
-              ))}
+            <div className="stats-grid-container">
+              <div className="stats-grid">
+                {[
+                  {
+                    number: "10,000+",
+                    label: "Clientes",
+                    icon: "👥",
+                  },
+                  { number: "50+", label: "Eventos", icon: "🎉" },
+                  { number: "15+", label: "Platillos", icon: "🍜" },
+                  { number: "98%", label: "Calidad", icon: "⭐" },
+                ].map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="stat-card"
+                  >
+                    <div className="stat-icon">{stat.icon}</div>
+                    <div className="stat-number">{stat.number}</div>
+                    <div className="stat-label">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
